@@ -1,0 +1,19 @@
+ 
+  <div class="container">
+    <div class="button-grid">
+      <p *ngIf="buttons.length === 0">No buttons found</p>  
+      <button  [disabled]="AlreadyClicked(btn)" class="btn" *ngFor="let btn of buttons;let i = index" (click)="handleClick(i )"
+      [ngStyle]="getButtonStyle(btn)">
+        Button {{ btn.count }}
+      </button>
+    </div>
+  
+  <div class="status-container"  >
+    <button class="reset-btn"  [disabled]="resetStart"(click)="reset()"
+    [ngStyle]="getButtonResetStyle( )">Reset</button>
+  </div>
+  <div class="status-container" *ngIf="!ResetNotClicked">
+    <label>Pushed Buttons: <span [innerHTML]="statusMessage"></span></label>
+  </div>
+  </div>
+  

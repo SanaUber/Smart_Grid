@@ -1,0 +1,87 @@
+/* Centering the content vertically and horizontally */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Background color for the page */
+  }
+  
+  .container {
+    /* text-align: center;*/
+    align-items: center; 
+    display: flex; 
+    flex-direction: column; /* Stack the reset button on top of the grid */
+    }
+  
+  .reset-btn {
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px; /* Space between the reset button and the grid */
+    border-radius: 12px; /* Curved border */
+    transition: background-color 0.3s;
+  }
+  
+  .reset-btn:hover {
+    background-color: #e53935;
+  }
+  
+  .button-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 10px;
+    width: 80%;
+    max-width: 400px;
+    border: 2px solid #ccc; /* Border around the grid */
+    border-radius: 12px; /* Curved border for the grid */
+    padding: 20px; /* Padding inside the grid */
+    background-color: rgb(210, 210, 210); /* Light background for the grid */
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    border-radius: 8px; /* Curved border for the buttons */
+  }
+  
+  .btn:hover {
+    background-color: grey;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 600px) {
+    .button-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for small screens */
+    }
+  }
+  .status-container {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  label {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+  }
+  
+  @media (max-width: 400px) {
+    .button-grid {
+      grid-template-columns: 1fr; /* 1 column for very small screens */
+    }
+  }
+  
